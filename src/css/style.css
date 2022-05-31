@@ -104,8 +104,8 @@ body {
   display: flex;
   flex-direction: column;
   width: 12rem;
-  background-color: rgba(50, 50, 50, 0.5);
-  padding: 1rem;
+  /* background-color: rgba(50, 50, 50, 0.5); */
+  padding: 1.4rem;
   gap: 2rem;
   border-radius: 1rem;
   font-size: 1.6rem;
@@ -118,6 +118,12 @@ body {
 
 .ayah-item .arabic {
   direction: rtl;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.ayah-item .translation {
+  width: 70ch;
   margin-bottom: 1rem;
 }
 
