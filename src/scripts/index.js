@@ -1,6 +1,6 @@
 
 async function getSuraList(el) {
-  const res = await fetch("/src/data/surah-title.json");
+  const res = await fetch("./src/data/surah-title.json");
   const data = await res.json();
   
   console.log("HERE", { data })
@@ -17,7 +17,7 @@ async function getSuraList(el) {
 
 async function getAyahList(el) {
   const params = Object.fromEntries(new URLSearchParams(location.search));
-  const res = await fetch(`/src/data/surah/${params.surah}.json`);
+  const res = await fetch(`./src/data/surah/${params.surah}.json`);
   const data = await res.json();
   
   
