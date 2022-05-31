@@ -7,7 +7,7 @@ async function getSuraList(el) {
 
   let html = ""; 
   for(let surah of data) {
-    html += `<div class="surah"><a href="/surah.html?surah=${surah.transliteration}">${surah.name} (${surah.transliteration}) - ${surah.nAyah}</a></div>`;
+    html += `<div class="surah"><a href="./surah.html?surah=${surah.transliteration}">${surah.name} (${surah.transliteration}) - ${surah.nAyah}</a></div>`;
   }
 
   // console.log(this, e)
@@ -20,9 +20,8 @@ async function getAyahList(el) {
   const res = await fetch(`./src/data/surah/${params.surah}.json`);
   const data = await res.json();
   
-  
-
   let html = ""; 
+
   for(let surah of data) {
     // html += `<div class="ayah">${surah.arabic} <br /> <br /> ${surah.translation}</div>`;
     html += `
