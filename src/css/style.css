@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Oswald', sans-serif;
+  background: #121212;
+}
+
+.main {
+  max-width: 130rem;
+  width: 90%;
+  margin: 12rem auto;
+}
+
+.heading {
+  text-align: center;
+  color: #eee;
+}
+
+.heading h1 {
+  font-size: 9rem;
+}
+
+.heading h1 a {
+  text-decoration: none;
+  color: #eee;
+}
+
+.heading h4 {
+  margin-top: 2rem;
+  line-height: .8;
+  font-size: 6rem;
+}
+
+.search-container {
+  width: 100%;
+  max-width: 80rem;
+  margin: 6rem auto;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 1.2rem 2rem;
+  border-radius: 10rem;
+  background-color: #eee;
+  font-size: 2.2rem;
+}
+
+.search-container input:focus {
+  outline: 2px solid #fff;
+}
+
+.surah-list {
+  /* margin-top: 6rem; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.surah, .ayah-item {
+  padding: 2rem;
+  border: 1px solid #1E1E1E;
+  background-color: #1E1E1E;
+  box-shadow: 0 0 .1rem rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  font-size: 2rem;
+  color: #fff;
+  letter-spacing: 1px;
+  /* text-transform: uppercase; */
+  font-weight: 400;
+}
+
+.surah a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.surah a:hover {
+  text-decoration: underline;
+}
+
+.ayah-list {
+  margin-top: 6rem;
+  display: grid;
+  gap: 2rem;
+  /* direction: rtl; */
+}
+
+.ayah-item {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  width: 12rem;
+  background-color: rgba(50, 50, 50, 0.5);
+  padding: 1rem;
+  gap: 2rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+}
+
+.ayah-item .ayah-text {
+  width: 100%;
+  padding: 0 3rem;
+}
+
+.ayah-item .arabic {
+  direction: rtl;
+  margin-bottom: 1rem;
+}
+
+.bismillah {
+  text-align: center;
+  margin-top: 5rem;
+}

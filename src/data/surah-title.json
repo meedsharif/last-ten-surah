@@ -1,0 +1,92 @@
+[
+  {
+    "translation": "The Opening",
+    "transliteration": "Al-Faatiha",
+    "name": "الفاتحة",
+    "nAyah": 7,
+    "revelationOrder": 5,
+    "type": "meccan"
+  },
+  {
+    "translation": "The Elephant",
+    "transliteration": "Al-Fil",
+    "name": "الفيل",
+    "nAyah": 5,
+    "revelationOrder": 19,
+    "type": "meccan"
+  },
+  {
+    "translation": "Quraysh",
+    "transliteration": "Quraish",
+    "name": "قريش",
+    "nAyah": 4,
+    "revelationOrder": 29,
+    "type": "meccan"
+  },
+  {
+    "translation": "Almsgiving",
+    "transliteration": "Al-Maa'un",
+    "name": "الماعون",
+    "nAyah": 7,
+    "revelationOrder": 17,
+    "type": "meccan"
+  },
+  {
+    "translation": "Abundance",
+    "transliteration": "Al-Kawthar",
+    "name": "الكوثر",
+    "nAyah": 3,
+    "revelationOrder": 15,
+    "type": "meccan"
+  },
+  {
+    "translation": "The Disbelievers",
+    "transliteration": "Al-Kaafiroon",
+    "name": "الكافرون",
+    "nAyah": 6,
+    "revelationOrder": 18,
+    "type": "meccan"
+  },
+  {
+    "translation": "Divine Support",
+    "transliteration": "An-Nasr",
+    "name": "النصر",
+    "nAyah": 3,
+    "revelationOrder": 114,
+    "type": "medinan"
+  },
+  {
+    "altName": "المسد",
+    "translation": "The Blazing Flames",
+    "altTranslation": "The Palm Fibre",
+    "transliteration": "Al-Lahab",
+    "name": "اللهب",
+    "nAyah": 5,
+    "revelationOrder": 6,
+    "type": "meccan"
+  },
+  {
+    "translation": "Sincerity",
+    "transliteration": "Al-Ikhlaas",
+    "name": "الإخلاص",
+    "nAyah": 4,
+    "revelationOrder": 22,
+    "type": "meccan"
+  },
+  {
+    "translation": "The Dawn",
+    "transliteration": "Al-Falaq",
+    "name": "الفلق",
+    "nAyah": 5,
+    "revelationOrder": 20,
+    "type": "meccan"
+  },
+  {
+    "translation": "Mankind",
+    "transliteration": "An-Naas",
+    "name": "الناس",
+    "nAyah": 6,
+    "revelationOrder": 21,
+    "type": "meccan"
+  }
+]
