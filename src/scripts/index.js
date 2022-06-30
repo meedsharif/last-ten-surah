@@ -66,7 +66,7 @@ async function getAyahList(el) {
             <img src="src/img/icons/bookmark.svg" alt="">
           </span>
           <span>
-            <img src="src/img/icons/share.svg" alt="">
+            <img src="src/img/icons/copy.svg" alt="">
           </span>
         </div>
         <div class="ayah-text">

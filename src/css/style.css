@@ -177,7 +177,7 @@ body {
 
 .controls img {
   width: 2.4rem;
-
+  cursor: pointer;
 }
 
 .ayah-item .ayah-text {
