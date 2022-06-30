@@ -52,7 +52,7 @@ async function getAyahList(el) {
           <span id="play-btn" onclick="playSurah(${idx})" >
             <img src="src/img/icons/play.svg" alt="">
           </span>
-          <span id="copy-btn" onclick="copyText(${surah.arabic}, ${surah.translation}})">
+          <span id="copy-btn" onclick="copyText(${surah.arabic}, ${surah.translation})">
             <img src="src/img/icons/copy.svg" alt="">
           </span>
         </div>
