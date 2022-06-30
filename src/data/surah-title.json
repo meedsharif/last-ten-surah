@@ -5,7 +5,8 @@
     "name": "الفاتحة",
     "nAyah": 7,
     "revelationOrder": 5,
-    "type": "meccan"
+    "type": "meccan",
+    "order": 1
   },
   {
     "translation": "The Elephant",
@@ -13,7 +14,8 @@
     "name": "الفيل",
     "nAyah": 5,
     "revelationOrder": 19,
-    "type": "meccan"
+    "type": "meccan",
+    "order": 105
   },
   {
     "translation": "Quraysh",
@@ -21,7 +23,8 @@
     "name": "قريش",
     "nAyah": 4,
     "revelationOrder": 29,
-    "type": "meccan"
+    "type": "meccan",
+    "order": 106
   },
   {
     "translation": "Almsgiving",
@@ -29,7 +32,8 @@
     "name": "الماعون",
     "nAyah": 7,
     "revelationOrder": 17,
-    "type": "meccan"
+    "type": "meccan",
+    "order": 107
   },
   {
     "translation": "Abundance",
@@ -37,7 +41,8 @@
     "name": "الكوثر",
     "nAyah": 3,
     "revelationOrder": 15,
-    "type": "meccan"
+    "type": "meccan",
+    "order": 108
   },
   {
     "translation": "The Disbelievers",
@@ -45,7 +50,8 @@
     "name": "الكافرون",
     "nAyah": 6,
     "revelationOrder": 18,
-    "type": "meccan"
+    "type": "meccan",
+    "order": 109
   },
   {
     "translation": "Divine Support",
@@ -53,7 +59,8 @@
     "name": "النصر",
     "nAyah": 3,
     "revelationOrder": 114,
-    "type": "medinan"
+    "type": "medinan",
+    "order": 110
   },
   {
     "altName": "المسد",
@@ -63,7 +70,8 @@
     "name": "اللهب",
     "nAyah": 5,
     "revelationOrder": 6,
-    "type": "meccan"
+    "type": "meccan",
+    "order": 111
   },
   {
     "translation": "Sincerity",
@@ -71,7 +79,8 @@
     "name": "الإخلاص",
     "nAyah": 4,
     "revelationOrder": 22,
-    "type": "meccan"
+    "type": "meccan",
+    "order": 112
   },
   {
     "translation": "The Dawn",
@@ -79,7 +88,8 @@
     "name": "الفلق",
     "nAyah": 5,
     "revelationOrder": 20,
-    "type": "meccan"
+    "type": "meccan",
+    "order": 113
   },
   {
     "translation": "Mankind",
@@ -87,6 +97,7 @@
     "name": "الناس",
     "nAyah": 6,
     "revelationOrder": 21,
-    "type": "meccan"
+    "type": "meccan",
+    "order": 114
   }
 ]

@@ -58,6 +58,7 @@ body {
   outline: 2px solid #fff;
 }
 
+/* SURAH */
 .surah-list {
   /* margin-top: 6rem; */
   display: grid;
@@ -67,7 +68,7 @@ body {
 
 .surah, .ayah-item {
   padding: 2rem;
-  border: 1px solid #1E1E1E;
+  border: 2px solid #1E1E1E;
   background-color: #1E1E1E;
   box-shadow: 0 0 .1rem rgba(0, 0, 0, 0.15);
   border-radius: 1rem;
@@ -78,15 +79,59 @@ body {
   font-weight: 400;
 }
 
-.surah a {
+.surah{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   text-decoration: none;
-  color: #fff;
+  gap: 4rem;
+  align-items: center;
 }
 
-.surah a:hover {
-  text-decoration: underline;
+.surah:hover {
+  border: 2px solid #3b3b3b;
 }
 
+.surah :is(.left, .right) {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+}
+
+.surah .left {
+  margin-right: auto;
+}
+
+.surah .number-box {
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: #363636;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  transform: rotate(45deg);
+  border-radius: 5px;
+}
+
+.surah .number-box .number {
+  transform: rotate(-45deg);
+}
+
+.surah :is(.left, .right) small {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #777;
+}
+
+.surah .right {
+  text-align: right;
+}
+
+/* AYAH */
 .ayah-list {
   margin-top: 6rem;
   display: grid;
