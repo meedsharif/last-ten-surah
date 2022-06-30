@@ -1,6 +1,9 @@
 
 let surahList = [];
 
+let audioTimestamps = [];
+let currentlyPlaying;
+let audioTimeouts;
 
 
 async function getSuraList(el) {
@@ -44,15 +47,12 @@ async function getAyahList(el) {
 
   for(const [idx, surah] of data.entries()) {
     html += `
-      <div class="ayah-item" onclick="playSurah()">
+      <div class="ayah-item" onclick="playSurah(${idx})" data-idx="${idx}">
         <div class="controls">
-          <span>
+          <span id="play-btn">
             <img src="src/img/icons/play.svg" alt="">
           </span>
-          <span>
-            <img src="src/img/icons/bookmark.svg" alt="">
-          </span>
-          <span>
+          <span id="copy-btn">
             <img src="src/img/icons/copy.svg" alt="">
           </span>
         </div>
@@ -81,29 +81,85 @@ async function getAyahList(el) {
 
 }
 
-function playSurah() {
+async function getAudioData() {
+  const params = Object.fromEntries(new URLSearchParams(location.search));
+  const res = await fetch(`./src/data/surah-audio-timestamp/${params.surah}.json`);
+  const data = await res.json();
+  audioTimestamps = [...data];
+}
+
+function updateAudioSrc() {
+  const params = Object.fromEntries(new URLSearchParams(location.search));
+  const audio = document.getElementsByTagName("audio")[0];
+  if(audio) {
+    audio.src = `./src/data/surah-audio/${params.surah}.mp3`;
+  }
+}
+
+function playSurah(idx) {
+  clearTimeout(audioTimeouts);
+
   /**
    * @type HTMLMediaElement
    */
   const audio = document.getElementsByTagName("audio")[0];
+  const el = document.querySelector(`[data-idx="${idx}"]`);
+  console.log(el);
+
+  if(el) {
+    /**
+     * @type HTMLImageElement | null
+     */
+    const playBtn = el.querySelector("#play-btn > img");
+
+    if(playBtn) {
+      
+      if(currentlyPlaying) {
+        if(el.isEqualNode(currentlyPlaying)) {
+          playBtn.src = "src/img/icons/play.svg";
+          audio.pause();
+          currentlyPlaying = null;
+          return;
+        }else {
+          currentlyPlaying.querySelector("#play-btn > img").src = "src/img/icons/play.svg";
+          playBtn.src = "src/img/icons/pause.svg";
+        }
+      }else {
+        console.log('HERE')
+        playBtn.src = "src/img/icons/pause.svg";
+      }
+    }
+  }
+  
   
   if(audio) {
-    audio.currentTime = 3;
+    audio.currentTime = audioTimestamps[idx];
+    currentlyPlaying = el;
+    
     audio.play();
+
+    if(idx !== audioTimestamps.length - 1) {
+      audioTimeouts = setTimeout(() => {
+        audio.pause();
+        currentlyPlaying.querySelector("#play-btn > img").src = "src/img/icons/play.svg";
+        currentlyPlaying = null;
+      }, ((audioTimestamps[idx + 1] - audioTimestamps[idx]) * 1000));
+    }
   }
 }
 
-function registerEvents() {
+function load() {
   const surahList = document.getElementById("surah-list");
   const ayahList = document.getElementById("ayah-list");
-  console.log(ayahList)
   if(surahList) {
     getSuraList(surahList);
   }
 
   if(ayahList) {
     getAyahList(ayahList);
+    updateAudioSrc();
+    getAudioData();
   }
 }
 
-registerEvents()
+load()
