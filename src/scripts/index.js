@@ -83,7 +83,13 @@ async function getAyahList(el) {
 
 async function copyText(arabic, translation) {
   
-  const text = `${arabic} <br /> ${translation}`;
+  const text = 
+    `${arabic}
+   
+  ${translation}
+  
+  - https://oss.meedcodes.com/last-ten-surah/surah.html?surah=${location.search}
+  `;
   
   await navigator.clipboard.writeText(text);
   alert("Copied to clipboard");
