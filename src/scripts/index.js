@@ -139,7 +139,6 @@ function playSurah(idx) {
           playBtn.src = "src/img/icons/pause.svg";
         }
       }else {
-        console.log('HERE')
         playBtn.src = "src/img/icons/pause.svg";
       }
     }
@@ -152,13 +151,20 @@ function playSurah(idx) {
     
     audio.play();
 
-    if(idx !== audioTimestamps.length - 1) {
+    let durationOfAyah = audioTimestamps[idx + 1] - audioTimestamps[idx];
+    if(idx === audioTimestamps.length - 1) {
+      durationOfAyah = audio.duration - audioTimestamps[idx];
+    }
+
+    if(idx <= audioTimestamps.length - 1) {
       audioTimeouts = setTimeout(() => {
         audio.pause();
         currentlyPlaying.querySelector("#play-btn > img").src = "src/img/icons/play.svg";
         currentlyPlaying = null;
-      }, ((audioTimestamps[idx + 1] - audioTimestamps[idx]) * 1000));
+      }, ((durationOfAyah) * 1000));
     }
+
+
   }
 }
 
