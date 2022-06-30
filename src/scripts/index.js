@@ -44,7 +44,7 @@ async function getAyahList(el) {
 
   for(const [idx, surah] of data.entries()) {
     html += `
-      <div class="ayah-item">
+      <div class="ayah-item" onclick="playSurah()">
         <div class="controls">
           <span>
             <img src="src/img/icons/play.svg" alt="">
@@ -77,6 +77,19 @@ async function getAyahList(el) {
 
   if(params.surah === "Al-Faatiha") {
     bismillah?.remove();
+  }
+
+}
+
+function playSurah() {
+  /**
+   * @type HTMLMediaElement
+   */
+  const audio = document.getElementsByTagName("audio")[0];
+  
+  if(audio) {
+    audio.currentTime = 3;
+    audio.play();
   }
 }
 

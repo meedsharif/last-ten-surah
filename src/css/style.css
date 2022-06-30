@@ -200,3 +200,7 @@ body {
   text-align: center;
   margin-top: 5rem;
 }
+
+audio, source {
+  display: none;
+}
