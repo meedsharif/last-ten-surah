@@ -88,7 +88,7 @@ async function copyText(arabic, translation) {
    
   ${translation}
   
-  - https://oss.meedcodes.com/last-ten-surah/surah.html?surah=${location.search}
+  https://oss.meedcodes.com/last-ten-surah/surah.html?surah=${location.search}
   `;
   
   await navigator.clipboard.writeText(text);
