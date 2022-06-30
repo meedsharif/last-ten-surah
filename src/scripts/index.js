@@ -12,7 +12,7 @@ async function getSuraList(el) {
   for(let surah of surahList) {
     const { transliteration, name, order, nAyah, translation } = surah;
     html += `
-    <a class="surah" href="/surah.html?surah=${surah.transliteration}">
+    <a class="surah" href="./surah.html?surah=${surah.transliteration}">
       <div class="number-box">
         <div class="number">
           ${order}
@@ -43,19 +43,6 @@ async function getAyahList(el) {
   let arabicNumbers = "٠١٢٣٤٥٦٧٨٩";
 
   for(const [idx, surah] of data.entries()) {
-
-    // html += `
-    //     <div class="ayah-item">
-    //       <div class="controls">
-    //         <span>Bookmark</span>
-    //         <span>Share</span>
-    //       </div>
-    //       <div class="ayah-text">
-    //         <div class="arabic">${surah.arabic} <span class="ayah-number">${arabicNumbers[idx+1]}</span> </div>
-    //         <div class="translation">${surah.translation}</div>
-    //       </div>
-    //     </div>
-    // `;
     html += `
       <div class="ayah-item">
         <div class="controls">
