@@ -49,7 +49,7 @@ async function getAyahList(el) {
     html += `
       <div class="ayah-item"" data-idx="${idx}">
         <div class="controls">
-          <span id="play-btn" onclick="playSurah(${idx})>
+          <span id="play-btn" onclick="playSurah(${idx})" >
             <img src="src/img/icons/play.svg" alt="">
           </span>
           <span id="copy-btn" onclick="copyText(${surah.arabic}, ${surah.translation}})">
