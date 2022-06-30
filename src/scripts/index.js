@@ -52,7 +52,7 @@ async function getAyahList(el) {
           <span id="play-btn">
             <img src="src/img/icons/play.svg" alt="">
           </span>
-          <span id="copy-btn">
+          <span id="copy-btn" onclick="copyText(${surah.arabic}, ${surah.translation}})">
             <img src="src/img/icons/copy.svg" alt="">
           </span>
         </div>
@@ -79,6 +79,13 @@ async function getAyahList(el) {
     bismillah?.remove();
   }
 
+}
+
+async function copyText(arabic, translation) {
+  
+  const text = `${arabic} <br /> ${translation}`;
+  
+  await navigator.clipboard.writeText(text)
 }
 
 async function getAudioData() {
