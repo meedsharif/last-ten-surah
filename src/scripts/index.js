@@ -85,7 +85,8 @@ async function copyText(arabic, translation) {
   
   const text = `${arabic} <br /> ${translation}`;
   
-  await navigator.clipboard.writeText(text)
+  await navigator.clipboard.writeText(text);
+  alert("Copied to clipboard");
 }
 
 async function getAudioData() {
