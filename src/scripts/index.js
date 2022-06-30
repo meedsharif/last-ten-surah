@@ -7,11 +7,9 @@ async function getSuraList(el) {
   const res = await fetch("./src/data/surah-title.json");
   const data = await res.json();
   surahList = [...data];
-  // console.log("HERE", { data })
 
   let html = ""; 
   for(let surah of surahList) {
-    // html += `<div class="surah"><a href="./surah.html?surah=${surah.transliteration}">${surah.name} (${surah.transliteration}) - ${surah.nAyah}</a></div>`;
     const { transliteration, name, order, nAyah, translation } = surah;
     html += `
     <a class="surah" href="/surah.html?surah=${surah.transliteration}">
@@ -31,8 +29,6 @@ async function getSuraList(el) {
     </a>
     `;
   }
-
-  // console.log(this, e)
   el.innerHTML = html;
   
 }
@@ -43,20 +39,41 @@ async function getAyahList(el) {
   const data = await res.json();
   
   let html = ""; 
+  
+  let arabicNumbers = "٠١٢٣٤٥٦٧٨٩";
 
-  for(let surah of data) {
-    // html += `<div class="ayah">${surah.arabic} <br /> <br /> ${surah.translation}</div>`;
+  for(const [idx, surah] of data.entries()) {
+
+    // html += `
+    //     <div class="ayah-item">
+    //       <div class="controls">
+    //         <span>Bookmark</span>
+    //         <span>Share</span>
+    //       </div>
+    //       <div class="ayah-text">
+    //         <div class="arabic">${surah.arabic} <span class="ayah-number">${arabicNumbers[idx+1]}</span> </div>
+    //         <div class="translation">${surah.translation}</div>
+    //       </div>
+    //     </div>
+    // `;
     html += `
-        <div class="ayah-item">
-          <div class="controls">
-            <span>Bookmark</span>
-            <span>Share</span>
-          </div>
-          <div class="ayah-text">
-            <div class="arabic">${surah.arabic}</div>
-            <div class="translation">${surah.translation}</div>
-          </div>
+      <div class="ayah-item">
+        <div class="controls">
+          <span>
+            <img src="src/img/icons/play.svg" alt="">
+          </span>
+          <span>
+            <img src="src/img/icons/bookmark.svg" alt="">
+          </span>
+          <span>
+            <img src="src/img/icons/share.svg" alt="">
+          </span>
         </div>
+        <div class="ayah-text">
+          <div class="arabic">${surah.arabic} <span class="ayah-number">${arabicNumbers[idx+1]}</div>
+          <div class="translation">${surah.translation}</div>
+        </div>
+      </div>
     `;
   }
 

@@ -68,10 +68,7 @@ body {
 
 .surah, .ayah-item {
   padding: 2rem;
-  border: 2px solid #1E1E1E;
-  background-color: #1E1E1E;
   box-shadow: 0 0 .1rem rgba(0, 0, 0, 0.15);
-  border-radius: 1rem;
   font-size: 2rem;
   color: #fff;
   letter-spacing: 1px;
@@ -84,8 +81,11 @@ body {
   justify-content: space-between;
   width: 100%;
   text-decoration: none;
+  border-radius: 1rem;
   gap: 4rem;
   align-items: center;
+  border: 2px solid #1E1E1E;
+  background-color: #1E1E1E;
 }
 
 .surah:hover {
@@ -136,6 +136,9 @@ body {
   margin-top: 6rem;
   display: grid;
   gap: 2rem;
+  background: #1E1E1E;
+  border-radius: 1rem;
+  padding: 4rem 2rem;
   /* direction: rtl; */
 }
 
@@ -145,15 +148,36 @@ body {
   align-items: center;
 }
 
+.ayah-number {
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 5rem;
+  border: 2px solid #444;
+  color: #999;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ayah-item:not(:last-child) {
+  border-bottom: 1px solid rgba(66, 66, 66, 0.6);
+}
+
 .controls {
   display: flex;
   flex-direction: column;
   width: 12rem;
   /* background-color: rgba(50, 50, 50, 0.5); */
   padding: 1.4rem;
-  gap: 2rem;
+  gap: 1rem;
   border-radius: 1rem;
   font-size: 1.6rem;
+}
+
+.controls img {
+  width: 2.4rem;
+
 }
 
 .ayah-item .ayah-text {
