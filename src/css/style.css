@@ -204,6 +204,21 @@ body {
   margin-top: 5rem;
 }
 
+.about-container {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+  color: #eee;
+}
+
+.about-heading {
+  font-size: 3rem; 
+}
+
+.about-p {
+  font-size: 1.6rem;
+}
+
 audio, source {
   display: none;
 }
